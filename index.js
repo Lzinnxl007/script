@@ -1,6 +1,6 @@
 import XLSX from "xlsx";
 
-const workbook = XLSX.readFile("leeds.xlsx");
+const workbook = XLSX.readFile("./read/leeds.xlsx");
 const worksheet = workbook.Sheets["Página1"];
 
 const jsonData = XLSX.utils
@@ -22,10 +22,10 @@ const newWorksheet = XLSX.utils.json_to_sheet(jsonData);
 
 XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "Página1");
 
-const filename = "franca"; // Nome do arquivo final
+const filename = "nome_do_arquivo"; // Nome do arquivo final
 
 try {
-  XLSX.writeFile(newWorkbook, `./${filename}.xlsx`);
+  XLSX.writeFile(newWorkbook, `./result/${filename}.xlsx`);
   console.log("Arquivo Excel filtrado salvo com sucesso.");
 } catch (error) {
   console.error("Erro ao salvar o arquivo Excel filtrado:", error);
