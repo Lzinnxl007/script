@@ -7,7 +7,7 @@
 
 3 - No final do arquivo "index.js" verifique o nome do arquivo final que será criado e modifique de acordo com o que desejar
 
-4 - Após isso digite no terminal o seguinte comando "node index.js"
+4 - Após isso digite no terminal o seguinte comando "npm start"
 
 5 - O arquivo final já filtrado será adicionado a pasta "result", mova o arquivo para onde desejar em sua maquina...
 

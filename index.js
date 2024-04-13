@@ -15,7 +15,7 @@ const jsonData = XLSX.utils
     return row[1] && !row[1].toString().startsWith("11") && row[0].toString().includes("Turismo" || "turismo" || "viagem" || "viagens" || "travel" || "Travel" || "Agencia" || "agencia" || "Tur" || "tur" || "Viagem");
   });
 
-console.log(jsonData.length);
+console.log(`Extrações totais após a filtragem: ${jsonData.length}`);
 
 const newWorkbook = XLSX.utils.book_new();
 const newWorksheet = XLSX.utils.json_to_sheet(jsonData);
@@ -26,7 +26,7 @@ const filename = "nome_do_arquivo"; // Nome do arquivo final
 
 try {
   XLSX.writeFile(newWorkbook, `./result/${filename}.xlsx`);
-  console.log("Arquivo Excel filtrado salvo com sucesso.");
+  console.log("Arquivo Excel filtrado salvo com sucesso!");
 } catch (error) {
-  console.error("Erro ao salvar o arquivo Excel filtrado:", error);
+  console.error("Erro ao salvar o arquivo Excel:", error);
 }
