@@ -12,10 +12,10 @@ const jsonData = XLSX.utils
     defval: "",
   })
   .filter((row) => {
-    return row[1] && !row[1].toString().startsWith("11") && row[0].toString().includes("Turismo" || "turismo" || "viagem" || "viagens" || "travel" || "Travel" || "Agencia" || "agencia" || "Tur" || "tur" || "Viagem");
+    return row[1] && !row[1].toString().startsWith("11") && row[0].toString().includes("Turismo" || "turismo" || "viagem" || "viagens" || "travel" || "Travel" || "Agencia" || "agencia" || "Tur" || "tur" || "Viagem" || "Hotel" || "hotel" || "Viage" || "viage");
   });
 
-console.log(`Extrações totais após a filtragem: ${jsonData.length}`);
+console.log(`Total de contatos após a filtragem: ${jsonData.length}`);
 
 const newWorkbook = XLSX.utils.book_new();
 const newWorksheet = XLSX.utils.json_to_sheet(jsonData);
